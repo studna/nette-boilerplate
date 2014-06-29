@@ -1,0 +1,9 @@
+Options -Indexes
+
+RewriteEngine On
+
+# rewrite to app root
+RewriteCond %{HTTP_HOST} ([^.]+)$
+RewriteRule (.*) public/$1 [L]
+
+

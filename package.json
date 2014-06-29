@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+
+  "author": "",
+  "description": "",
+
+  "dependencies": {
+    "async": "*",
+    "autoprefixer": "0.8.x",
+    "closure-runner": "git://github.com/studnaa/closure-runner.git#master",
+    "rework": "0.20.x",
+    "rework-svg": "*"
+  },
+
+  "scripts": { 
+    "css" : "node_modules/.bin/runner css" 
+  }
+}

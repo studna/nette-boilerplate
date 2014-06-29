@@ -1,0 +1,35 @@
+{
+  "app": {
+    "output": "./public/build/app.min.js",
+    "output.deps": "./public/build/deps.js",
+    "output.source-map": "./public/build/source-map.js",
+
+    "namespaces": [ "app" ],
+    "roots": [
+      "./public/dev",
+      "./public/lib"
+    ],
+
+    "css": {
+      "./public/build/app.min.css": [
+        "./public/dev/css/reset.css",
+        "./public/dev/css/app.rework.css"
+      ]
+    },
+
+    "css.autoprefixer": [ "last 2 versions" ],
+    "css.inheritance": true,
+    "css.minify": true
+  },
+
+  "closure-compiler": "./build/closure-compiler",
+  "closure-library": "./public/lib/closure-library",
+
+  "tasks.build": "./build/build.task.js",
+  "tasks.css": "./build/css.task.js",
+  "tasks.watch": "./build/watch.task.js",
+
+  "watch": {
+    "css": "./public/dev/css"
+  }
+}
