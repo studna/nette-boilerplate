@@ -6,15 +6,37 @@ if [ ! -d "build" ] || [ ! -f "init" ]; then
   exit 1
 fi
 
+echo -n "Do you wish to install bower dependencies? y/n "
+read decision
 
-boilerplate_url=$(git config --get remote.origin.url)
-git remote rm origin
-git remote add closure-boilerplate "$boilerplate_url"
+case $decision in 
+  [Yy]* ) bower install;   
+esac
 
+echo -n "Do you wish to install npm packages? y/n "
+read decision
 
-rm "init"
-git rm "init"
-rm "README.md"
-git rm "README.md"
-git add .
-git commit -m '[clean initial environment]'
+case $decision in 
+  [Yy]* ) npm install;   
+esac
+
+echo -n "Do you wish to do initial commit? y/n "
+read decision
+
+case $decision in 
+  [Yy]* )
+    
+  git remote rm origin  
+
+  echo -n "Enter your GIT repository URL:";
+  read origin_url
+
+  git remote add origin "$origin_url"
+
+  rm "init"
+  git rm "init"
+  rm "README.md"
+  git rm "README.md"
+  git add .
+  git commit -m '[clean initial environment]'
+esac

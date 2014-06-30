@@ -13,6 +13,7 @@
     "css": {
       "./public/build/app.min.css": [
         "./public/dev/css/reset.css",
+        "./public/dev/css/style.css",
         "./public/dev/css/app.rework.css"
       ]
     },
@@ -28,6 +29,8 @@
   "tasks.build": "./build/build.task.js",
   "tasks.css": "./build/css.task.js",
   "tasks.watch": "./build/watch.task.js",
+
+  "use-goog-in-tasks": true,
 
   "watch": {
     "css": "./public/dev/css"

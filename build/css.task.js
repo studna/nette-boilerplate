@@ -5,9 +5,9 @@ var path = require('path');
 var rework = require('rework');
 var svg = require('rework-svg');
 
-
 module.exports = function (runner, args, callback) {
-  var rework_flags = {
+
+  var rework_flags = {    
     autoprefixer: runner.getAppConfigValue('css.autoprefixer'),
     at2x: !!runner.getAppConfigValue('css.at2x'),
     colors: !!runner.getAppConfigValue('css.colors'),
