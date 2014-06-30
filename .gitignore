@@ -1,5 +1,5 @@
-log/
-temp/
+log/*
+temp/*
 vendor/
 node_modules/
 public/lib/
@@ -14,3 +14,5 @@ app/config/local.neon
 .DS_Store
 desktop.ini
 Thumbs.db
+
+production.zip

@@ -32,11 +32,12 @@ case $decision in
   read origin_url
 
   git remote add origin "$origin_url"
-
-  rm "init"
-  git rm "init"
-  rm "README.md"
+  
+  git rm "init"  
   git rm "README.md"
   git add .
   git commit -m '[clean initial environment]'
 esac
+
+rm "init"
+rm "README.md"
