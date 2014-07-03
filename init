@@ -1,26 +1,14 @@
 #!/bin/bash
-
-
 if [ ! -d "build" ] || [ ! -f "init" ]; then
   echo -e "\033[0;31mThis script must be executed from the root project directory.\033[0m"
   exit 1
 fi
 
-echo -n "Do you wish to install bower dependencies? y/n "
-read decision
+composer install;
+bower install;
+npm install;
 
-case $decision in 
-  [Yy]* ) bower install;   
-esac
-
-echo -n "Do you wish to install npm packages? y/n "
-read decision
-
-case $decision in 
-  [Yy]* ) npm install;   
-esac
-
-echo -n "Do you wish to do initial commit? y/n "
+echo -n "\nDo you wish to do initial commit? y/n "
 read decision
 
 case $decision in 
