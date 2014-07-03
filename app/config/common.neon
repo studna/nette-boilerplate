@@ -28,8 +28,8 @@ common:
 production < common:
   nette:
     database:
-      dsn: 'mysql:host=wm43.wedos.net;dbname=d32967_jim;charset=utf8'
-      user: 'w32967_jim'
-      password: 'pDpNv2Xg'
+      dsn:
+      user:
+      password:
       
 development < common:
