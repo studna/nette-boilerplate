@@ -4,11 +4,14 @@ if [ ! -d "build" ] || [ ! -f "init" ]; then
   exit 1
 fi
 
-composer install;
-bower install;
-npm install;
+mkdir log
+mkdir temp
 
-echo -n "\nDo you wish to do initial commit? y/n "
+composer install
+bower install
+npm install
+
+echo -n "\033[0;31mDo you wish to do initial commit? y/n\033[0m "
 read decision
 
 case $decision in 

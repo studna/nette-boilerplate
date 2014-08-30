@@ -14,8 +14,8 @@ common:
       expiration: 14 days
 
     database:
-      dsn:
-      user:
+      dsn: localhost
+      user: root
       password:
 
 
@@ -26,10 +26,6 @@ common:
 
 
 production < common:
-  nette:
-    database:
-      dsn:
-      user:
-      password:
       
 development < common:
+

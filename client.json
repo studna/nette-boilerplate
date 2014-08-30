@@ -1,8 +1,8 @@
 {
   "app": {
-    "output": "./public/build/app.min.js",
-    "output.deps": "./public/build/deps.js",
-    "output.source-map": "./public/build/source-map.js",
+    "output": "./public/js/app.min.js",
+    "output.deps": "./public/js/deps.js",
+    "output.source-map": "./public/js/source-map.js",
 
     "namespaces": [ "app" ],
     "roots": [
@@ -11,10 +11,10 @@
     ],
 
     "css": {
-      "./public/build/app.min.css": [
-        "./public/dev/css/reset.css",
-        "./public/dev/css/style.css",
-        "./public/dev/css/app.rework.css"
+      "./public/css/app.min.css": [
+        "./public/css/reset.css",
+        "./public/css/style.css",
+        "./public/css/app.rework.css"
       ]
     },
 
